@@ -4,7 +4,7 @@ class Calculator:
 
     result = 0
     def get_result(self):
-        """ Get Result of Calculation """
+        """ Get Result of Calculation"""
         return self.result
 
     def add_number(self, value_a):
