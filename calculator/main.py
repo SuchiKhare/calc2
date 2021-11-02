@@ -4,30 +4,25 @@
 class Calculator:
     """ This is the Calculator class"""
 
-    result = 0
+    @staticmethod
+    def add_number(value_a, value_b):
+        """ adds two numbers"""
+        return value_a + value_b
 
-    def get_result(self):
-        """ Get Result of Calculation"""
-        return self.result
+    @staticmethod
+    def subtract_number(value_a, value_b):
+        """ subtract two numbers """
+        return value_a - value_b
 
-    def add_number(self, value_a):
-        """ adds number to result"""
-        self.result = self.result + value_a
-        return self.result
+    @staticmethod
+    def multiply_numbers(value_a, value_b):
+        """ multiply two numbers """
+        return value_a * value_b
 
-    def subtract_number(self, value_a):
-        """ subtract number from result"""
-        self.result = self.result - value_a
-        return self.result
-
-    def multiply_numbers(self, value_a, value_b):
-        """ multiply two numbers and store the result"""
-        self.result = value_a * value_b
-        return self.result
-
-    def divide_numbers(self, value_a, value_b):
-        """ divide two numbers and store the result"""
-        if value_b == 0:
-            raise Exception("Zero Division Error")
-        self.result = value_a / value_b
-        return self.result
+    @staticmethod
+    def divide_numbers(value_a, value_b):
+        """ divide two numbers """
+        try:
+            return value_a / value_b
+        except ZeroDivisionError as myer:
+            raise ZeroDivisionError from myer
