@@ -1,4 +1,4 @@
-# Calculator Project Setup
+#  Calculator Project Setup
 [![Build Status](https://app.travis-ci.com/SuchiKhare/calc2.svg?branch=main)](https://app.travis-ci.com/SuchiKhare/calc2)
 Run Pip Install
 pip install -r requirements.txt
