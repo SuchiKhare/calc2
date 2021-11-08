@@ -1,5 +1,5 @@
 #  Calculator Project Setup
-# Branch name is cal_2
+# Branch name is cal2_part4
 [![Build Status](https://app.travis-ci.com/SuchiKhare/calc2.svg?branch=cal2_part4)](https://app.travis-ci.com/SuchiKhare/calc2)
 Run Pip Install
 pip install -r requirements.txt
