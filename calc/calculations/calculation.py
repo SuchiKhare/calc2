@@ -20,7 +20,8 @@ class Calculation:
         # lists can be modified and tuple cannot, tuple are faster.
         # We need to convert the tuple of potentially random data types (its raw data)
         # into a standard data format to keep things consistent so we convert it to float
-        # then i make it a tuple again because i actually won't need to change the calculation values
+        # then i make it a tuple again because i actually won't need to
+        # change the calculation values
         # I can also use it as a list and then i would be able to edit the calculation
         list_values_float = []
         for item in values:
