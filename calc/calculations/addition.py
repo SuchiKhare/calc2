@@ -1,13 +1,13 @@
-"""Addition Class"""
-from calc.calculations.calculation import Calculation
+"""Class for Addition Operation"""
+from calc.calculations.operation import Operation
 
 
-class Addition(Calculation):
-    """ calculation addition class"""
+class Addition(Operation):
+    """subclass Addition extending base Operation"""
 
-    def get_result(self):
-        """get the addition results"""
-        sum_of_values = 0.0
+    def get_output(self):
+        """Adds the elements in tuple"""
+        sum_of_elements = 0.0
         for value in self.values:
-            sum_of_values = value + sum_of_values
-        return sum_of_values
+            sum_of_elements = sum_of_elements + value
+        return sum_of_elements

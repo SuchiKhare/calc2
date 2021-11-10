@@ -1,12 +1,13 @@
-"""Testing Addition"""
+"""Testing of Addition"""
 from calc.calculations.addition import Addition
 
 
 def test_calculation_addition():
-    """testing that our calculator has a static method for addition"""
+    """test addition of numbers"""
     # Arrange
-    mynumbers = (1.0, 2.0)
-    addition = Addition(mynumbers)
+    my_num = (2.5, 3.0)
     # Act
+    addition = Addition(my_num)
     # Assert
-    assert addition.get_result() == 3.0
+    output = addition.get_output()
+    assert output == 5.5

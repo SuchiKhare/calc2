@@ -1,39 +1,22 @@
 """Testing the Calculator"""
 import pytest
+
+from calc.calculations.operation import Operation
 from calc.calculator import Calculator
 from calc.history.calculations import Calculations
 
 
 @pytest.fixture
 def clear_history_fixture():
-    """define a function that will run each time you pass it to a test, it is called a fixture"""
+    """fixture method that will run each time you pass it to a test"""
     # pylint: disable=redefined-outer-name
     Calculations.clear_history()
 
 
-# You have to add the fixture function as a parameter to the test that you want to use it with
-def test_calculator_add_static(clear_history_fixture):
-    """testing that our calculator has a static method for addition"""
+def test_add_numbers(clear_history_fixture):
+    """test addition of numbers"""
     # pylint: disable=unused-argument,redefined-outer-name
-    # using Tuple instead of args because we can pack as much data as we need into the tuple
-    my_tuple = (1.0, 2.0, 5.0)
-    Calculator.add_numbers(my_tuple)
-    assert Calculator.get_last_result_value() == 8.0
-
-
-def test_calculator_subtract_static(clear_history_fixture):
-    """Testing the subtract method of the calc"""
-    # pylint: disable=unused-argument,redefined-outer-name
-    # using Tuple instead of args because we can pack as much data as we need into the tuple
-    my_tuple = (1.0, 2.0, 3.0)
-    Calculator.subtract_numbers(my_tuple)
-    assert Calculator.get_last_result_value() == -6.0
-
-
-def test_calculator_multiply_static(clear_history_fixture):
-    """Testing the subtract method of the calc"""
-    # pylint: disable=unused-argument,redefined-outer-name
-    # using Tuple instead of args because we can pack as much data as we need into the tuple
-    my_tuple = (1.0, 2.0, 3.0)
-    Calculator.multiply_numbers(my_tuple)
-    assert Calculator.get_last_result_value() == 6.0
+    numbers = (10.0, 20.0, 30.0)
+    Calculator.add_numbers(numbers)
+    assert Calculations.get_first_calculation().get_output() == 60.0
+    assert isinstance(Calculations.get_last_calculation_object(), Operation)
