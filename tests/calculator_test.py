@@ -1,5 +1,7 @@
 """Testing the Calculator"""
 import pytest
+
+from calc.calculations.division import Division
 from calc.calculator import Calculator
 from calc.history.calculations import Calculations
 
@@ -28,3 +30,12 @@ def test_calculator_multiply_static(clear_history_fixture):
     """Testing the subtract method of the calc"""
     # pylint: disable=unused-argument,redefined-outer-name
     assert Calculator.multiply_numbers(1.0, 2.0) == 2.0
+
+
+def test_divide_numbers_static(clear_history_fixture):
+    """Testing the subtract method of the calc"""
+    # pylint: disable=unused-argument,redefined-outer-name
+    assert Calculator.divide_numbers(1.0, 2.0) == "0.50"
+    with pytest.raises(ZeroDivisionError):
+        value = Division((1.0, 0.0, 1.0))
+        assert value.get_result() == 1.00
