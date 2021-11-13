@@ -1,5 +1,8 @@
 """Calculation history Class"""
 from calc.calculations.addition import Addition
+from calc.calculations.division import Division
+from calc.calculations.multiplication import Multiplication
+from calc.calculations.subtraction import Subtraction
 
 
 class Calculations:
@@ -45,8 +48,29 @@ class Calculations:
         return Calculations.history.append(calculation)
 
     @staticmethod
-    def add_addition_calculation(values):
+    def add_addition_calculation(tuple_elements):
         """Add addition object to history"""
-        Calculations.add_calculation(Addition.create_operation(values))
-        # Get the result of the calculation
+        addition = Addition.create_operation(tuple_elements)
+        Calculations.add_calculation(addition)
+        return True
+
+    @staticmethod
+    def add_subtraction_calculation(tuple_elements):
+        """Add subtraction object to history"""
+        subtract = Subtraction.create_operation(tuple_elements)
+        Calculations.add_calculation(subtract)
+        return True
+
+    @staticmethod
+    def add_multiplication_calculation(tuple_elements):
+        """Add multiplication object to history"""
+        multiply = Multiplication.create_operation(tuple_elements)
+        Calculations.add_calculation(multiply)
+        return True
+
+    @staticmethod
+    def add_division_calculation(tuple_elements):
+        """Add division object to history"""
+        divide = Division.create_operation(tuple_elements)
+        Calculations.add_calculation(divide)
         return True

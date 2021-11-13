@@ -4,14 +4,17 @@
 class Operation:
     """Base class for operations such as Add, Subtract, Multiply, Divide etc"""
 
+    # The __init__ method is a constructor and runs as soon as an
+    # object of a Operation class is instantiated.
     def __init__(self, values: tuple):
-        """Constructor convert to generic input parameters to float"""
-        self.values = Operation.convert_cal_input_to_float(values)
+        """Parameterized Constructor convert to generic input parameters to float"""
+        # instance attribute values of type tuple and is protected
+        self._values = Operation.convert_cal_input_to_float(values)
 
     @staticmethod
     def convert_cal_input_to_float(values):
         """this function standardize to get all calculator inputs to float values"""
-        # any given tuple will be converted to tuple of floats
+        # any given tuple will be converted to tuple of floats by iterating the tuple
         values_float_list = []
         for value in values:
             values_float_list.append(float(value))

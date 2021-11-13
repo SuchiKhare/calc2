@@ -6,13 +6,27 @@ from calc.history.calculations import Calculations
 class Calculator:
     """calculator class"""
 
+    # pylint: disable=too-few-public-methods
     @staticmethod
-    def add_numbers(tuple_values: tuple):
+    def add_numbers(tuple_elements: tuple):
         """adds elements in tuple"""
-        Calculations.add_addition_calculation(tuple_values)
+        Calculations.add_addition_calculation(tuple_elements)
         return True
 
     @staticmethod
-    def get_last_calculation_object():
-        """get the first result value """
-        return Calculations.get_last_calculation_object()
+    def subtract_numbers(tuple_elements: tuple):
+        """subtract elements in tuple"""
+        Calculations.add_subtraction_calculation(tuple_elements)
+        return True
+
+    @staticmethod
+    def multiply_numbers(tuple_elements: tuple):
+        """multiply elements in tuple"""
+        Calculations.add_multiplication_calculation(tuple_elements)
+        return True
+
+    @staticmethod
+    def divide_numbers(tuple_elements: tuple):
+        """divide elements in tuple"""
+        Calculations.add_division_calculation(tuple_elements)
+        return True
