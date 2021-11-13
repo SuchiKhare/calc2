@@ -60,6 +60,7 @@ def test_get_calculation_first_object(clear_history_fixture, setup_calculation_f
     # pylint: disable=unused-argument,redefined-outer-name
     assert Calculations.get_first_calculation_object().get_output() == 3
 
+
 def test_get_calculation_first_result(clear_history_fixture, setup_calculation_fixture):
     """testing get the first calculation"""
     # pylint: disable=unused-argument,redefined-outer-name
