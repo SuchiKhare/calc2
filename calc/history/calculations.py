@@ -33,9 +33,15 @@ class Calculations:
         return calculation.get_output()
 
     @staticmethod
-    def get_first_calculation():
+    def get_first_calculation_object():
         """get first calculation"""
         return Calculations.history[0]
+
+    @staticmethod
+    def get_first_calculation_result_value():
+        """get result of first calculation"""
+        calculation = Calculations.get_first_calculation_object()
+        return calculation.get_output()
 
     @staticmethod
     def get_calculation(num):

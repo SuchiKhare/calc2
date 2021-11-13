@@ -55,10 +55,15 @@ def test_get_calc_last_result_value(clear_history_fixture, setup_calculation_fix
     assert Calculations.get_last_calculation_result_value() == 4
 
 
-def test_get_calculation_first(clear_history_fixture, setup_calculation_fixture):
+def test_get_calculation_first_object(clear_history_fixture, setup_calculation_fixture):
     """testing get the first calculation"""
     # pylint: disable=unused-argument,redefined-outer-name
-    assert Calculations.get_first_calculation().get_output() == 3
+    assert Calculations.get_first_calculation_object().get_output() == 3
+
+def test_get_calculation_first_result(clear_history_fixture, setup_calculation_fixture):
+    """testing get the first calculation"""
+    # pylint: disable=unused-argument,redefined-outer-name
+    assert Calculations.get_first_calculation_result_value() == 3
 
 
 def test_history_count(clear_history_fixture, setup_calculation_fixture):
