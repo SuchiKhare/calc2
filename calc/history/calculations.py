@@ -49,9 +49,9 @@ class Calculations:
         return Calculations.history[num]
 
     @staticmethod
-    def add_calculation(calculation):
+    def add_calculation(operation):
         """ add calculation to history"""
-        return Calculations.history.append(calculation)
+        return Calculations.history.append(operation)
 
     @staticmethod
     def add_addition_calculation(tuple_elements):
