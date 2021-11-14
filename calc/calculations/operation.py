@@ -17,6 +17,7 @@ class Operation:
         # any given tuple will be converted to tuple of floats by iterating the tuple
         values_float_list = []
         for value in values:
+            # typecasting to float
             values_float_list.append(float(value))
         return tuple(values_float_list)
 
