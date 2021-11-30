@@ -1,6 +1,6 @@
 language: python
 python:
-  - "3.9"
+  - "3.8"
 install:
   - pip install -r requirements.txt
 # command to run tests
@@ -9,5 +9,5 @@ script:
 
 branches:
   only:
-    - main
-    - development
+    - suchiBranch1_CSV
+    - developmen
