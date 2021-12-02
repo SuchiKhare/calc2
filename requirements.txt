@@ -2,5 +2,3 @@ pytest-cov
 pytest
 pycodestyle
 pytest-pylint
-pandas
-setuptools~=49.2.1
