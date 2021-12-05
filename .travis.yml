@@ -10,4 +10,4 @@ script:
 branches:
   only:
     - suchiBranch1_CSV
-    - developmen
+    - development
