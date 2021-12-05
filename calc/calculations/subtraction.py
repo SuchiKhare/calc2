@@ -9,7 +9,9 @@ class Subtraction(Operation, Result):
     # This is the instance method
     def get_output(self):
         """Subtract the elements in tuple and return"""
-        diff_of_elements = 0.0
-        for value in self._values:
-            diff_of_elements = diff_of_elements + value
-        return diff_of_elements
+        for ind, value in enumerate(self._values):
+            if ind == 0:
+                diff = value
+            else:
+                diff = diff - value
+        return diff
