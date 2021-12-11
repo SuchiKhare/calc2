@@ -13,5 +13,8 @@ class ArchiveFile:
         # source = 'C:/Users/SuchiK/PycharmProjects/calc2_csv/tests/test_data/'
         # destination = 'C:/Users/SuchiK/PycharmProjects/calc2_csv/archived/'
         # shutil.move(source + file_name, destination + file_name)
+        source = '../../tests/test_data/'
+        destination = 'archived/'
+        shutil.move(source + file_name, destination + file_name)
         print("file_name ", file_name)
         return True
